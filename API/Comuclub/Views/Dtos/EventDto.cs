@@ -1,8 +1,9 @@
-﻿using Comuclub.Shared.Enums;
+﻿using Comuclub.Entities;
+using Comuclub.Shared.Enums;
 
-namespace Comuclub.Entities
+namespace Comuclub.Views.Dtos
 {
-    public class Event
+    public class EventDto
     {
         public long Id { get; set; }
         public string Title { get; set; }
@@ -14,6 +15,5 @@ namespace Comuclub.Entities
         public long ClubId { get; set; }
         public long AddressId { get; set; }
         public Address Address { get; set; }
-        
     }
 }
