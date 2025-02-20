@@ -35,7 +35,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseRouting();
 app.UseAuthorization();
-app.MapControllers();  // Eksikse ekleyelim!
+app.MapControllers();  
 
 // Hedef API endpoint'leri buraya ekleyebilirsin
 app.MapGet("/", () => "Hello World!");
