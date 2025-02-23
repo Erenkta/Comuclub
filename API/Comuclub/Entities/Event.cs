@@ -7,7 +7,7 @@ namespace Comuclub.Entities
         public long Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public string EventDate { get; set; }
+        public DateTimeOffset EventDate { get; set; }
         public EventTypeEnum EventType { get; set; }
         public byte[] Image { get; set; }
         public Club Club { get; set; }

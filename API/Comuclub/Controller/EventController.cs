@@ -36,10 +36,16 @@ namespace Comuclub.Controller
             return Ok(eventDetailDto);
         }
         [HttpGet("{eventName}")]
-        public async Task<ActionResult<EventDto>> findEventByName(string eventName)
+        public async Task<ActionResult<EventDto>> FindEventByName(string eventName)
         {
             var eventDto = await _eventService.findEventByName(eventName);
             return Ok(eventDto);
+        }
+        [HttpGet("{clubId}/upcoming")]
+        public async Task<ActionResult<ICollection<EventDto>>> FindUpcomingEvents(long clubId)
+        {
+            var upcomingEvents = await _eventService.findUpcomingEvents(clubId);
+            return Ok(upcomingEvents);
         }
 
     }

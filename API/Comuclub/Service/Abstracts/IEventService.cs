@@ -11,6 +11,8 @@ namespace Comuclub.Service.Abstracts
         
         Task<EventDto> getDetails(long  id);
         Task<EventDto> findEventByName(string name);
+
+        Task<ICollection<EventDto>> findUpcomingEvents(long clubId);
         
     }
 }

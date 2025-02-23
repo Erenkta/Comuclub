@@ -38,6 +38,17 @@ namespace Comuclub.Service.Concretes
             return _mapper.Map<EventDto>(result);
         }
 
+        public async Task<ICollection<EventDto>> findUpcomingEvents(long clubId)
+        {
+            var dbResult = await _context.Events
+               .Where(item => item.ClubId.Equals(clubId) && DateTimeOffset.Compare(DateTimeOffset.Now,item.EventDate) == -1).
+                Select(item => _mapper.Map<EventDto>(item))
+               .ToListAsync();
+
+            return dbResult;
+
+        }
+
         public async Task<EventDto> getDetails(long id)
         {
             var dbResult = await _context.Events.FindAsync(id);

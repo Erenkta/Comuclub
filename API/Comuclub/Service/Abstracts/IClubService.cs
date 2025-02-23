@@ -10,5 +10,6 @@ namespace Comuclub.Service.Abstracts
 
         Task<IEnumerable<Club>> findAll();
         Task<ClubDto> findByClubName(string clubName);
+
     }
 }
