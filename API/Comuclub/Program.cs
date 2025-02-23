@@ -1,3 +1,4 @@
+using Comuclub.Common;
 using Comuclub.Data;
 using Comuclub.Service.Abstracts;
 using Comuclub.Service.Concretes;
@@ -9,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IClubService, ClubService>();
 builder.Services.AddScoped<IEventService, EventService>();
 builder.Services.AddScoped<IOrganizerService, OrganizerService>();
+builder.Services.AddScoped<ILog,Logger>();
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 
@@ -40,8 +42,6 @@ app.UseRouting();
 app.UseAuthorization();
 app.MapControllers();  
 
-// Hedef API endpoint'leri buraya ekleyebilirsin
-app.MapGet("/", () => "Hello World!");
 
 
 app.Run();
