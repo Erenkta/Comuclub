@@ -1,5 +1,6 @@
 ﻿using Comuclub.Entities;
 using Comuclub.Service.Abstracts;
+using Comuclub.Views.Dtos;
 using Comuclub.Views.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,6 +30,12 @@ namespace Comuclub.Controller
 
             Club createdEntity = await _clubService.saveClub(entityModel);
             return Ok(createdEntity);
+        }
+        [HttpGet("{clubName}")]
+        public async Task<ActionResult<ClubDto>> findClubByName(string clubName)
+        {
+            var clubDto = await _clubService.findByClubName(clubName);
+            return Ok(clubDto);
         }
 
     }

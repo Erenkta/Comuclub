@@ -30,11 +30,10 @@ namespace Comuclub.Service.Concretes
 
         public async  Task<EventDto> findEventByName(string name)
         {
-            var result = await _context.Events.Where(item => item.Title.Equals(name)).FirstOrDefaultAsync(null);
+            var result = await _context.Events.Where(item => item.Title.Equals(name)).FirstOrDefaultAsync();
             if(result == null)
             {
                 _logger.LogError("Aradığınız Etkinlik Bulunamadı. Etkinlik Adı : "+name);
-                throw new Exception("Aradığınız Etkinlik Bulunamadı");
             }
             return _mapper.Map<EventDto>(result);
         }
