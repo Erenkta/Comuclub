@@ -2,12 +2,15 @@ using Comuclub.Data;
 using Comuclub.Service.Abstracts;
 using Comuclub.Service.Concretes;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IClubService, ClubService>();
 builder.Services.AddScoped<IEventService, EventService>();
 builder.Services.AddScoped<IOrganizerService, OrganizerService>();
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
 
 // appsettings.json'dan connection string'i al
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

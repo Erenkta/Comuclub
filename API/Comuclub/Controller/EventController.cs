@@ -1,5 +1,6 @@
 ﻿using Comuclub.Entities;
 using Comuclub.Service.Abstracts;
+using Comuclub.Views.Dtos;
 using Comuclub.Views.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +18,7 @@ namespace Comuclub.Controller
         }
 
         [HttpGet("all")]
-        public async Task<ActionResult<IEnumerable<Event>>> FindAll() {
+        public async Task<ActionResult<IEnumerable<EventDto>>> FindAll() {
             var result =await _eventService.findAll();
             return Ok(result);
         }
