@@ -32,3 +32,4 @@ msbuild.wrn
 .vs/
 API/Comuclub/.vs/Comuclub/v17/.suo
 API/Comuclub/.vs/Comuclub/v17/DocumentLayout.json
+API/Comuclub/obj/Debug/net8.0/Comuclub.csproj.AssemblyReference.cache
