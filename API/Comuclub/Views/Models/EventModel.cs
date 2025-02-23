@@ -10,6 +10,9 @@ namespace Comuclub.Views.Models
         public new long Id => base.Id;
 
         [JsonIgnore]
-        public new Club Club => base.Club; 
+        public new Club Club => base.Club;
+
+        [JsonIgnore]
+        public new Address Address => base.Address;
     }
 }

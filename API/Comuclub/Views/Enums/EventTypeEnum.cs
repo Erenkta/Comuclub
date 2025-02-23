@@ -2,7 +2,7 @@
 {
     public enum EventTypeEnum
     {
-        Online,
         Physical,
+        Online,
     }
 }

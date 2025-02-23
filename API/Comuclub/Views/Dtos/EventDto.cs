@@ -1,5 +1,6 @@
 ﻿using Comuclub.Entities;
 using Comuclub.Views.Enums;
+using System.Text.Json.Serialization;
 
 namespace Comuclub.Views.Dtos
 {
