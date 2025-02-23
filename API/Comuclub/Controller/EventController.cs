@@ -29,6 +29,18 @@ namespace Comuclub.Controller
             var createdEntity = await _eventService.saveEvent(model);
             return Ok(createdEntity);
         }
+        [HttpPost("{id}/details")]
+        public async Task<ActionResult<EventDto>> GetDetails(long id)
+        {
+            var eventDetailDto = await _eventService.getDetails(id);
+            return Ok(eventDetailDto);
+        }
+        [HttpGet("{eventName}")]
+        public async Task<ActionResult<EventDto>> findEventByName(string eventName)
+        {
+            var eventDto = await _eventService.findEventByName(eventName);
+            return Ok(eventDto);
+        }
 
     }
 }

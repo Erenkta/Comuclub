@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Comuclub.Common;
 using Comuclub.Data;
 using Comuclub.Entities;
 using Comuclub.Service.Abstracts;
@@ -12,10 +13,12 @@ namespace Comuclub.Service.Concretes
     {
         private readonly ComuClubContext _context;
         private readonly IMapper _mapper;
-        public EventService(ComuClubContext context,IMapper mapper)
+        private readonly ILog _logger;
+        public EventService(ComuClubContext context,IMapper mapper,ILog logger)
         {
             _context = context;
             _mapper = mapper;
+            _logger = logger;
         }
 
         public async Task<IEnumerable<EventDto>> findAll()
@@ -23,6 +26,23 @@ namespace Comuclub.Service.Concretes
             List<Event> dbResult = await _context.Events.ToListAsync();
 
             return dbResult.Select(item => _mapper.Map<EventDto>(item));
+        }
+
+        public async  Task<EventDto> findEventByName(string name)
+        {
+            var result = await _context.Events.Where(item => item.Title.Equals(name)).FirstOrDefaultAsync(null);
+            if(result == null)
+            {
+                _logger.LogError("Aradığınız Etkinlik Bulunamadı. Etkinlik Adı : "+name);
+                throw new Exception("Aradığınız Etkinlik Bulunamadı");
+            }
+            return _mapper.Map<EventDto>(result);
+        }
+
+        public async Task<EventDto> getDetails(long id)
+        {
+            var dbResult = await _context.Events.FindAsync(id);
+            return _mapper.Map<EventDto>(dbResult);
         }
 
         public async Task<Event> saveEvent(EventModel model)

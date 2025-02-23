@@ -1,5 +1,5 @@
 ﻿using Comuclub.Entities;
-using Comuclub.Shared.Enums;
+using Comuclub.Views.Enums;
 
 namespace Comuclub.Views.Dtos
 {

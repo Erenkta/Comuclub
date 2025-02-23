@@ -1,4 +1,4 @@
-﻿namespace Comuclub.Shared.Enums
+﻿namespace Comuclub.Views.Enums
 {
     public enum EventTypeEnum
     {

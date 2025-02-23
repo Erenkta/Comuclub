@@ -1,4 +1,4 @@
-﻿using Comuclub.Shared.Enums;
+﻿using Comuclub.Views.Enums;
 
 namespace Comuclub.Entities
 {

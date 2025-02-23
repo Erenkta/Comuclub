@@ -8,7 +8,9 @@ namespace Comuclub.Views.Models
     {
 
         [JsonIgnore] 
-        public new long Id => base.Id; 
+        public new long Id => base.Id;
+
+        [JsonIgnore]
         public new ICollection<Event> Events => base.Events; 
     }
 }

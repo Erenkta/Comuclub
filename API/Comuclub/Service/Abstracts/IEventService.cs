@@ -9,5 +9,8 @@ namespace Comuclub.Service.Abstracts
         Task<Event> saveEvent(EventModel model);
         Task<IEnumerable<EventDto>> findAll();
         
+        Task<EventDto> getDetails(long  id);
+        Task<EventDto> findEventByName(string name);
+        
     }
 }
