@@ -31,7 +31,7 @@
           <!-- When logged out -->
           <template v-if="!isAuthenticated">
             <router-link to="/login" class="btn btn-dark me-2" style="color: white !important;">Giriş Yap</router-link>
-            <router-link to="/register" class="btn btn-primary" style="color: white !important;">Kayıt Ol</router-link>
+            <!-- <router-link to="/register" class="btn btn-primary" style="color: white !important;">Kayıt Ol</router-link> -->
           </template>
 
           <!-- When logged in -->
