@@ -1,0 +1,139 @@
+/* Main CSS file */
+
+:root {
+  --primary-color: #3563c5; /* Blue shade  */
+  --secondary-color: #f9f9f9; /* Light background color */
+  --accent-color: #9fdbd1; /* Yellow accent color */
+  --dark-color: #1c1c21; /* Dark color for text */
+  --gray-color: #716871; /* Gray color for secondary text */
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --border-color: #e5e5e5;
+  --footer-color: #151617;
+}
+
+body, html {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--dark-color);
+  background-color: var(--white-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* Header styles */
+.navbar {
+  padding: 0.7rem 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  height: 30px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-accent {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: var(--dark-color) !important;
+}
+
+.btn-dark {
+  background-color: var(--dark-color) !important;
+  border-color: var(--dark-color) !important;
+}
+
+
+/* Card styles */
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+.footer {
+  background-color: var(--footer-color);
+  color: var(--white-color);
+  padding: 3rem 0;
+}
+
+/* Utility classes */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-accent {
+  background-color: var(--accent-color) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+}
+
+/* Custom styles for the member avatars in event/community cards */
+.member-avatars {
+  display: flex;
+  margin-right: 10px;
+}
+
+.member-avatars img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--white-color);
+  margin-left: -10px;
+}
+
+.member-avatars img:first-child {
+  margin-left: 0;
+}
+
+/* Search bar styles */
+.search-bar {
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  background-color: var(--white-color);
+}
+
+/* Event and community tags */
+.tag {
+  background-color: rgba(95, 81, 168, 0.1);
+  color: var(--primary-color);
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.tag-online {
+  background-color: rgba(95, 81, 168, 0.1);
+  color: var(--primary-color);
+}
+
+.tag-location {
+  background-color: rgba(75, 72, 117, 0.1);
+  color: #4b4875;
+}
