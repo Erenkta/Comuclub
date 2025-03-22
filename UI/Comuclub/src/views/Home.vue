@@ -26,7 +26,7 @@
         </div>
 
         <div class="row g-4" v-if="!isLoadingEvents">
-          <!-- Event Card 1 -->
+          <!-- Event Card -->
           <div class="card mb-4" v-for="event in events" :key="event.id">
             <div class="card-body p-4">
               <div class="row">
