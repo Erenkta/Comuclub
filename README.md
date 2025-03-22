@@ -72,10 +72,6 @@ Aşağıda, uygulamanın bazı ekran görüntülerini bulabilirsiniz. 👇
 **Uygulamamıza burdan giriş yaparak ekstra özelliklere sahip olabilirsiniz.**
 ![Giriş Sayfası](docs/Pages/giriş-ekranı.png)
 
-### 📝 Kayıt Sayfası
-**Uygulamamıza burdan kayıt olarak hesap oluşturabilirsiniz.**
-![Kayıt Sayfası](docs/Pages/kayıt-ekranı.png)
-
 ### 🎉 Etkinlikler
 **Etkinlikler sayfasında yaklaşan etkinliklere göz atın.**
 ![Etkinlikler](docs/Pages/etkinlik-sayfası.png)
